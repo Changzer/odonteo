@@ -71,10 +71,9 @@ describe('verifica se as paginas rodam', ()=> {
     const entrarButton = screen.getByText(/Entrar/i);
     fireEvent.click(entrarButton);
 
-    await waitFor(() =>  // tem que usar await, pq tem que esperar dar o fetch e retornar da API. //
     expect(
-        screen.getByText(/incorretos/i)
-    ).toBeInTheDocument())
+     await screen.findByText(/incorretos/i)
+    ).toBeInTheDocument()
   })
 
 });

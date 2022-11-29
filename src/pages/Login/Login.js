@@ -84,6 +84,9 @@ function Login() {
           />
         </label>
         <Button
+            dataTestid='submit'
+            id='submit'
+            name='submit'
           addClassName='form-button'
           onClickFunction={makeLogin}
         >
